@@ -5,6 +5,7 @@ Verification instruments for formal specifications. The repositories here are de
 | instrument | what | version |
 |---|---|---|
 | [quint-audit](https://github.com/Mimosa-Grove/quint-audit) | a deterministic linter for [Quint](https://github.com/quint-co/quint) specifications: decodes quint's parse IR, reports structural findings with spans, severities, suggestions and exit codes; runs at parse cost in CI | 0.1.0 |
+| [quint-checktrace](https://github.com/Mimosa-Grove/quint-checktrace) | a deterministic checker that compares recorded execution traces against Quint specifications: evaluates named invariants with quint's own evaluator at every recorded state, reports pass, fail or error per invariant, and emits machine-checkable records and a corpus gate for CI | 0.1.0 |
 
 ## Verification discipline
 
