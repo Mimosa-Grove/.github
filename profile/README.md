@@ -9,7 +9,13 @@ Verification instruments for formal specifications. The repositories here are de
 
 ## Verification discipline
 
-Every instrument states its contract and proves what it can. quint-audit's check semantics are written as Quint specs and bounded-model-checked. A mutant counts as killed only when two independent instruments fail it. A 67-spec corpus of real Quint files doubles as a drift detector. Exit codes separate a finding from a could-not-run. An instrument that cannot run never passes a gate.
+Every instrument states its contract and proves what it can.
+
+quint-audit's check semantics are written as Quint specs and bounded-model-checked. A mutant counts as killed only when two independent instruments fail it.
+
+quint-checktrace's checker contract is pinned by three JSON schemas, regression-checked against a 134-fixture net, and accepted against a 67-spec corpus of real Quint files. Its gate replays that evidence on every run and prints a marker, so a crashed gate is never mistaken for a pass.
+
+Both instruments separate a finding from a could-not-run by exit code. An instrument that cannot run never passes a gate.
 
 ## CI
 
